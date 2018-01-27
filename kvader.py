@@ -15,10 +15,13 @@ label = pyglet.text.Label('Hello, world',
                           x=window.width//2, y=window.height//2,
                           anchor_x='center', anchor_y='center')
 
+macka_x = 0
+macka_y = 0
+
 @window.event
 def on_draw():
     window.clear()
-    macka.blit(0,0)
+    macka.blit(macka_x, macka_y)
     mis.blit(400, 300)
     label.draw()
 
