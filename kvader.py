@@ -27,14 +27,17 @@ def on_draw():
 
 @window.event
 def on_key_press(symbol, modifiers):
+    global macka_x
+    global macka_y
     print('A key was pressed')
     if symbol == key.LEFT:
         print('  key left')
+        macka_x -= 20
     elif symbol == key.RIGHT:
-        pass
+        macka_x += 20
     elif symbol == key.UP:
-        pass
+        macka_y += 20
     elif symbol == key.DOWN:
-        pass
+        macka_y -= 20
 
 pyglet.app.run()
