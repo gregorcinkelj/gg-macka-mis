@@ -8,6 +8,7 @@ from pyglet.window import key
 
 window = pyglet.window.Window()
 macka = pyglet.resource.image('pic/gingerkitten-small.jpg')
+macka1 = pyglet.resource.image('pic/gingerkitten-small.jpg')
 mis = pyglet.resource.image('pic/mouse-small.jpg')
 label = pyglet.text.Label('Hello, world',
                           font_name='Times New Roman',
@@ -22,6 +23,7 @@ macka_y = 0
 def on_draw():
     window.clear()
     macka.blit(macka_x, macka_y)
+    macka1.blit(0, 0)
     mis.blit(400, 300)
     label.draw()
 
