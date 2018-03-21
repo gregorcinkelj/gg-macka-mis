@@ -24,10 +24,11 @@ macka_y = 0
 @window.event
 def on_draw():
     window.clear()
-    macka.blit(macka_x, macka_y)
-    macka1.blit(10, 10)
-    macka2.blit(20, 20)
-    macka3.blit(30, 30)
+    print "macka x,y = %d,%d" % (macka_x, macka_y)
+    macka.blit(macka_x+0, macka_y+0)
+    macka1.blit(macka_x+30, macka_y+20)
+    macka2.blit(macka_x+100, macka_y+150)
+    macka3.blit(macka_x+100, macka_y+50)
     # todo
     mis.blit(400, 300)
     label.draw()
