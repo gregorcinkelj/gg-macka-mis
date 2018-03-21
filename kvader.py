@@ -7,7 +7,7 @@ import pyglet
 from pyglet.window import key
 
 window = pyglet.window.Window()
-macka = pyglet.resource.image('pic/gingerkitten-small.jpg')
+macka0 = pyglet.resource.image('pic/gingerkitten-small.jpg')
 macka1 = pyglet.resource.image('pic/gingerkitten-small.jpg')
 macka2 = pyglet.resource.image('pic/gingerkitten-small.jpg')
 macka3 = pyglet.resource.image('pic/gingerkitten-small.jpg')
@@ -27,11 +27,13 @@ macka_y = 0
 def on_draw():
     window.clear()
     print "macka x,y = %d,%d" % (macka_x, macka_y)
-    macka.blit(macka_x+0, macka_y+0)
+    macka0.blit(macka_x+0, macka_y+0)
     macka1.blit(macka_x+50, macka_y+0)
     macka2.blit(macka_x+100, macka_y+0)
     macka3.blit(macka_x+150, macka_y+0)
-    # todo
+    # todo - premakni macka0, na njeno mesto macka1
+    # todo - premakni macka0, na njeno mesto macka1, na mesto macke1 gre macka2, itd
+    # todo - (kaj je for zanka?)
     mis.blit(400, 300)
     label.draw()
 
