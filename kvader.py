@@ -25,7 +25,9 @@ macka_y = 0
 def on_draw():
     window.clear()
     macka.blit(macka_x, macka_y)
-    macka1.blit(0, 0)
+    macka1.blit(10, 10)
+    macka2.blit(20, 20)
+    macka3.blit(30, 30)
     # todo
     mis.blit(400, 300)
     label.draw()
