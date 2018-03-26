@@ -28,9 +28,9 @@ def on_draw():
     window.clear()
     print "macka x,y = %d,%d" % (macka_x, macka_y)
     macka0.blit(macka_x+0, macka_y+0)
-    macka1.blit(macka_x+50, macka_y+0)
-    macka2.blit(macka_x+100, macka_y+0)
-    macka3.blit(macka_x+150, macka_y+0)
+    macka1.blit(50, 0)
+    macka2.blit(100, 0)
+    macka3.blit(150, 0)
     # todo - premakni macka0, na njeno mesto macka1
     # todo - premakni macka0, na njeno mesto macka1, na mesto macke1 gre macka2, itd
     # todo - (kaj je for zanka?)
@@ -44,12 +44,12 @@ def on_key_press(symbol, modifiers):
     print('A key was pressed')
     if symbol == key.LEFT:
         print('  key left')
-        macka_x -= 20
+        macka_x -= 50
     elif symbol == key.RIGHT:
-        macka_x += 20
+        macka_x += 50
     elif symbol == key.UP:
-        macka_y += 20
+        macka_y += 50
     elif symbol == key.DOWN:
-        macka_y -= 20
+        macka_y -= 50
 
 pyglet.app.run()
