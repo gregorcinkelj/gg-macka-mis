@@ -20,8 +20,8 @@ label = pyglet.text.Label('Hello, world',
                           x=window.width//2, y=window.height//2,
                           anchor_x='center', anchor_y='center')
 
-macka_x = 0
-macka_y = 0
+macka0_x = 0
+macka0_y = 0
 macka1_x = 50
 macka1_y = 0
 
@@ -29,8 +29,8 @@ macka1_y = 0
 def on_draw():
   # tu se vse slike narisejo
     window.clear()
-    print "macka x,y = %d,%d" % (macka_x, macka_y)
-    macka0.blit(macka_x+0, macka_y+0)
+    print "macka0 x,y = %d,%d" % (macka0_x, macka0_y)
+    macka0.blit(macka0_x+0, macka0_y+0)
     macka1.blit(macka1_x, macka1_y )
     macka2.blit(100, 0)
     macka3.blit(150, 0)
@@ -42,21 +42,21 @@ def on_draw():
 
 @window.event
 def on_key_press(symbol, modifiers):
-    global macka_x
-    global macka_y
+    global macka0_x
+    global macka0_y
     global macka1_x
     global macka1_y
     print('A key was pressed')
     if symbol == key.LEFT:
         print('  key left')
-        macka_x -= 50
+        macka0_x -= 50
         macka1_x -= 50
     elif symbol == key.RIGHT:
-        macka_x += 50
+        macka0_x += 50
         macka1_x += 50
     elif symbol == key.UP:
-        macka_y += 50
+        macka0_y += 50
     elif symbol == key.DOWN:
-        macka_y -= 50
+        macka0_y -= 50
 
 pyglet.app.run()
