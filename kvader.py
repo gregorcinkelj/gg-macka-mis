@@ -22,13 +22,16 @@ label = pyglet.text.Label('Hello, world',
 
 macka_x = 0
 macka_y = 0
+macka1_x = 50
+macka1_y = 0
 
 @window.event
 def on_draw():
+  # tu se vse slike narisejo
     window.clear()
     print "macka x,y = %d,%d" % (macka_x, macka_y)
     macka0.blit(macka_x+0, macka_y+0)
-    macka1.blit(50, 0)
+    macka1.blit(macka1_x, macka1_y )
     macka2.blit(100, 0)
     macka3.blit(150, 0)
     # todo - premakni macka0, na njeno mesto macka1
@@ -41,12 +44,16 @@ def on_draw():
 def on_key_press(symbol, modifiers):
     global macka_x
     global macka_y
+    global macka1_x
+    global macka1_y
     print('A key was pressed')
     if symbol == key.LEFT:
         print('  key left')
         macka_x -= 50
+        macka1_x -= 50
     elif symbol == key.RIGHT:
         macka_x += 50
+        macka1_x += 50
     elif symbol == key.UP:
         macka_y += 50
     elif symbol == key.DOWN:
