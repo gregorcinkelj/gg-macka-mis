@@ -30,6 +30,7 @@ def on_draw():
   # tu se vse slike narisejo
     window.clear()
     print "macka0 x,y = %d,%d" % (macka0_x, macka0_y)
+    print "macka1 x,y = %d,%d" % (macka1_x, macka1_y)
     macka0.blit(macka0_x+0, macka0_y+0)
     macka1.blit(macka1_x, macka1_y )
     macka2.blit(100, 0)
