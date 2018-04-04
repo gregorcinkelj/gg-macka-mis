@@ -54,22 +54,17 @@ def on_key_press(symbol, modifiers):
     global macka1_x
     global macka1_y
     print('A key was pressed')
+    if symbol == key.LEFT or symbol == key.RIGHT or symbol == key.UP or symbol == key.DOWN:
+        macka1_x = macka0_x
+        macka1_y = macka0_y
     if symbol == key.LEFT:
         print('  key left')
-        macka1_x = macka0_x
-        macka1_y = macka0_y
         macka0_x -= 50
     elif symbol == key.RIGHT:
-        macka1_x = macka0_x
-        macka1_y = macka0_y
         macka0_x += 50
     elif symbol == key.UP:
-        macka1_x = macka0_x
-        macka1_y = macka0_y
         macka0_y += 50
     elif symbol == key.DOWN:
-        macka1_x = macka0_x
-        macka1_y = macka0_y
         macka0_y -= 50
 
 pyglet.app.run()
