@@ -30,17 +30,23 @@ macka0_x = 0
 macka0_y = 0
 macka1_x = 50
 macka1_y = 0
+macka2_x = 100
+macka2_y = 0
+macka3_x = 150
+macka3_y = 0
+
+def dbg_izpisi_stanje():
+    print "macka 0,1,2,3 (x,y) = (%d,%d) (%d,%d) (%d,%d) (%d,%d) " % (macka0_x, macka0_y, macka1_x, macka1_y, macka2_x, macka2_y, macka3_x, macka3_y)
 
 @window.event
 def on_draw():
   # tu se vse slike narisejo
     window.clear()
-    print "macka0 x,y = %d,%d" % (macka0_x, macka0_y)
-    print "macka1 x,y = %d,%d" % (macka1_x, macka1_y)
+    dbg_izpisi_stanje()
     macka0.blit(macka0_x+0, macka0_y+0)
-    macka1.blit(macka1_x, macka1_y )
-    macka2.blit(100, 0)
-    macka3.blit(150, 0)
+    macka1.blit(macka1_x, macka1_y)
+    macka2.blit(macka2_x, macka2_y)
+    macka3.blit(macka3_x, macka3_y)
     # todo - premakni macka0, na njeno mesto macka1
     # todo - premakni macka0, na njeno mesto macka1, na mesto macke1 gre macka2, itd
     # todo - (kaj je for zanka?)
@@ -53,10 +59,24 @@ def on_key_press(symbol, modifiers):
     global macka0_y
     global macka1_x
     global macka1_y
+    global macka2_x
+    global macka2_y
+    global macka3_x
+    global macka3_y
     print('A key was pressed')
     if symbol == key.LEFT or symbol == key.RIGHT or symbol == key.UP or symbol == key.DOWN:
+        print "-----------------------"
+        dbg_izpisi_stanje()
+        macka3_x = macka2_x
+        macka3_y = macka2_y
+        dbg_izpisi_stanje()
+        macka2_x = macka1_x
+        macka2_y = macka1_y
+        dbg_izpisi_stanje()
         macka1_x = macka0_x
         macka1_y = macka0_y
+        dbg_izpisi_stanje()
+        print "-----------------------"
     if symbol == key.LEFT:
         print('  key left')
         macka0_x -= 50
