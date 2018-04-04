@@ -7,10 +7,16 @@ import pyglet
 from pyglet.window import key
 
 window = pyglet.window.Window()
-macka0 = pyglet.resource.image('pic/gingerkitten-small.jpg')
-macka1 = pyglet.resource.image('pic/gingerkitten-small.jpg')
-macka2 = pyglet.resource.image('pic/gingerkitten-small.jpg')
-macka3 = pyglet.resource.image('pic/gingerkitten-small.jpg')
+macka0 = pyglet.resource.image('pic/gingerkitten-small-0.jpg')
+macka1 = pyglet.resource.image('pic/gingerkitten-small-1.jpg')
+macka2 = pyglet.resource.image('pic/gingerkitten-small-2.jpg')
+macka3 = pyglet.resource.image('pic/gingerkitten-small-3.jpg')
+macka0.width = 50
+macka0.height = 50
+macka1.width = 50
+macka1.height = 50
+macka2.width = 50
+macka2.height = 50
 macka3.width = 50
 macka3.height = 50
 mis = pyglet.resource.image('pic/mouse-small.jpg')
