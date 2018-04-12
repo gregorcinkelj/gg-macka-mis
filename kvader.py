@@ -43,6 +43,7 @@ def on_draw():
   # tu se vse slike narisejo
     window.clear()
     dbg_izpisi_stanje()
+    mis.blit(400, 300)
     macka0.blit(macka0_x+0, macka0_y+0)
     macka1.blit(macka1_x, macka1_y)
     macka2.blit(macka2_x, macka2_y)
@@ -50,7 +51,6 @@ def on_draw():
     # todo - premakni macka0, na njeno mesto macka1
     # todo - premakni macka0, na njeno mesto macka1, na mesto macke1 gre macka2, itd
     # todo - (kaj je for zanka?)
-    mis.blit(400, 300)
     label.draw()
 
 @window.event
