@@ -36,6 +36,14 @@ def list_primer():
     for pes in vsi_psi:
         print "ime psa je %s " % (pes)
 
+# TODO kaj je objekt
+# Nekaj, kar ima lastnosti, npr. traktor, ki ima ime, hitrost, barvo itd.
+# Ali pa macka, ki je iz 4 clenok/kvadrov, vsak clen ima svojo pozicijo.
+
+# kako zgleda traktor v farming simulator
+# en xml, kjer ime traktorja, hitrost, obrati kardana.
+# pri macka mis lahko macko zamenjava s traktorjem :)
+
 def main():
     radij1 = 10
     obseg1 = krog_obseg(radij1) # rezultat bo priblizno 62.82
