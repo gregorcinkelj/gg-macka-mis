@@ -28,6 +28,14 @@ def for_zanka_primer():
 # TODO definiraj razred/class Krog, in Kvader.
 # ta bo imel metode obseg() in ploscina().
 
+def list_primer():
+    # list je "container", nekaj, v kar shranjujes elemente
+    # potem lahko s for zanko nad vsemi elemnti izveden neko operacijo
+    # kateri so psi v Podpeci
+    vsi_psi = ["Tara", "Tor", "Miki"]
+    for pes in vsi_psi:
+        print "ime psa je %s " % (pes)
+
 def main():
     radij1 = 10
     obseg1 = krog_obseg(radij1) # rezultat bo priblizno 62.82
@@ -38,7 +46,7 @@ def main():
     print "krog2 - radij1=%f, obseg1=%f" % (radij1, obseg1)
 
     for_zanka_primer()
-
+    list_primer()
 
 main()
 
