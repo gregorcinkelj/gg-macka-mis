@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # ex_function.py - example for function
 
@@ -16,14 +16,14 @@ def krog_obseg(rr):
 
 def for_zanka_primer():
     # for zanka isto stvar veckrat ponovi
-    print "For zanka primer"
+    print("For zanka primer")
     for ii in range(1, 10):
-        print " ii=%d" % (ii)
-    print "Obseg krogov z radijem od 1 do 10"
+        print(" ii=%d" % (ii))
+    print("Obseg krogov z radijem od 1 do 10")
     for radij in range(1, 10):
-        print " radij=%d" % (radij)
+        print(" radij=%d" % (radij))
         obseg = krog_obseg (radij)
-        print "krog - radij=%f, obseg=%f" % (radij, obseg)
+        print("krog - radij=%f, obseg=%f" % (radij, obseg))
 
 # TODO definiraj razred/class Krog, in Kvader.
 # ta bo imel metode obseg() in ploscina().
@@ -34,7 +34,7 @@ def list_primer():
     # kateri so psi v Podpeci
     vsi_psi = ["Tara", "Tor", "Miki"]
     for pes in vsi_psi:
-        print "ime psa je %s " % (pes)
+        print("ime psa je %s " % (pes))
 
 # TODO kaj je objekt
 # Nekaj, kar ima lastnosti, npr. traktor, ki ima ime, hitrost, barvo itd.
@@ -47,11 +47,11 @@ def list_primer():
 def main():
     radij1 = 10
     obseg1 = krog_obseg(radij1) # rezultat bo priblizno 62.82
-    print "krog1 - radij1=%f, obseg1=%f" % (radij1, obseg1)
+    print("krog1 - radij1=%f, obseg1=%f" % (radij1, obseg1))
 
     radij1 = 35
     obseg1 = krog_obseg(radij1) # rezultat bo priblizno 219.87
-    print "krog2 - radij1=%f, obseg1=%f" % (radij1, obseg1)
+    print("krog2 - radij1=%f, obseg1=%f" % (radij1, obseg1))
 
     for_zanka_primer()
     list_primer()

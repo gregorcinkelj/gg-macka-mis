@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # http://pyglet.readthedocs.io/en/pyglet-1.3-maintenance/programming_guide/quickstart.html
 # http://steveasleep.com/pyglettutorial.html
@@ -38,7 +38,7 @@ macka3_x = 150
 macka3_y = 0
 
 def dbg_izpisi_stanje():
-    print "macka 0,1,2,3 (x,y) = (%d,%d) (%d,%d) (%d,%d) (%d,%d) " % (macka0_x, macka0_y, macka1_x, macka1_y, macka2_x, macka2_y, macka3_x, macka3_y)
+    print("macka 0,1,2,3 (x,y) = (%d,%d) (%d,%d) (%d,%d) (%d,%d) " % (macka0_x, macka0_y, macka1_x, macka1_y, macka2_x, macka2_y, macka3_x, macka3_y))
 
 @window.event
 def on_draw():
@@ -67,7 +67,7 @@ def on_key_press(symbol, modifiers):
     global macka3_y
     print('A key was pressed')
     if symbol == key.LEFT or symbol == key.RIGHT or symbol == key.UP or symbol == key.DOWN:
-        print "-----------------------"
+        print("-----------------------")
         dbg_izpisi_stanje()
         macka3_x = macka2_x
         macka3_y = macka2_y
@@ -78,7 +78,7 @@ def on_key_press(symbol, modifiers):
         macka1_x = macka0_x
         macka1_y = macka0_y
         dbg_izpisi_stanje()
-        print "-----------------------"
+        print("-----------------------")
     if symbol == key.LEFT:
         print('  key left')
         macka0_x -= 50
