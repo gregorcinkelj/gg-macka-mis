@@ -31,8 +31,9 @@ def for_zanka_primer():
 
 class Krog:
 
-    def __init__(self, rr = 1.0):
+    def __init__(self, rr = 1.0, iime = "brez-imena"):
         self.radij = rr
+        self.ime = iime
 
     def obseg(self):
         oobseg = 2 * pi * self.radij
@@ -42,12 +43,18 @@ class Krog:
         pploscina = pi * self.radij * self.radij
         return pploscina
 
+    def izpisi(self):
+        print("class/object %s - radij=%f, obseg=%f" % (self.ime, self.radij, self.obseg()))
+
 
 def krog_primer():
-    krog1 = Krog()
-    krog2 = Krog(5.0)
+    krog1 = Krog(1.0, "moj krog1")
+    krog2 = Krog(5.0, "moj krog2")
     print("class/object krog1 - radij=%f, obseg=%f" % (krog1.radij, krog1.obseg() ))
     print("class/object krog2 - radij=%f, obseg=%f" % (krog2.radij, krog2.obseg() ))
+    print("--------")
+    krog1.izpisi()
+    krog2.izpisi()
 
 
 def list_primer():
