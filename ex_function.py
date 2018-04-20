@@ -28,6 +28,28 @@ def for_zanka_primer():
 # TODO definiraj razred/class Krog, in Kvader.
 # ta bo imel metode obseg() in ploscina().
 
+
+class Krog:
+
+    def __init__(self, rr = 1.0):
+        self.radij = rr
+
+    def obseg(self):
+        oobseg = 2 * pi * self.radij
+        return oobseg
+
+    def ploscina(self):
+        pploscina = pi * self.radij * self.radij
+        return pploscina
+
+
+def krog_primer():
+    krog1 = Krog()
+    krog2 = Krog(5.0)
+    print("class/object krog1 - radij=%f, obseg=%f" % (krog1.radij, krog1.obseg() ))
+    print("class/object krog2 - radij=%f, obseg=%f" % (krog2.radij, krog2.obseg() ))
+
+
 def list_primer():
     # list je "container", nekaj, v kar shranjujes elemente
     # potem lahko s for zanko nad vsemi elemnti izveden neko operacijo
@@ -55,6 +77,7 @@ def main():
 
     for_zanka_primer()
     list_primer()
+    krog_primer()
 
 main()
 
