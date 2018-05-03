@@ -38,6 +38,7 @@ macka3_x = 150
 macka3_y = 0
 
 counter = 0.0
+smer = key.DOWN
 
 def dbg_izpisi_stanje():
     print("macka 0,1,2,3 (x,y) = (%d,%d) (%d,%d) (%d,%d) (%d,%d) " % (macka0_x, macka0_y, macka1_x, macka1_y, macka2_x, macka2_y, macka3_x, macka3_y))
@@ -46,7 +47,7 @@ def update_frames(dt):
     global counter
     counter = counter + dt
     print("counter = %f" % (counter))
-    on_key_press(key.UP, None)
+    on_key_press(smer, None)
 
 
 @window.event
@@ -74,6 +75,7 @@ def on_key_press(symbol, modifiers):
     global macka2_y
     global macka3_x
     global macka3_y
+    global smer
     print('A key was pressed')
     if symbol == key.LEFT or symbol == key.RIGHT or symbol == key.UP or symbol == key.DOWN:
         print("-----------------------")
@@ -91,12 +93,16 @@ def on_key_press(symbol, modifiers):
     if symbol == key.LEFT:
         print('  key left')
         macka0_x -= 50
+        smer = key.LEFT
     elif symbol == key.RIGHT:
         macka0_x += 50
+        smer = key.RIGHT
     elif symbol == key.UP:
         macka0_y += 50
+        smer = key.UP
     elif symbol == key.DOWN:
         macka0_y -= 50
+        smer = key.DOWN
 
 pyglet.clock.schedule_interval(update_frames,1/1.0)
 pyglet.app.run()
