@@ -46,6 +46,7 @@ def update_frames(dt):
     global counter
     counter = counter + dt
     print("counter = %f" % (counter))
+    on_key_press(key.UP, None)
 
 
 @window.event
