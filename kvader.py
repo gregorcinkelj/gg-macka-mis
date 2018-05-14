@@ -60,8 +60,8 @@ def on_draw():
     macka1.blit(macka1_x, macka1_y)
     macka2.blit(macka2_x, macka2_y)
     macka3.blit(macka3_x, macka3_y)
-    # todo - premakni macka0, na njeno mesto macka1
-    # todo - premakni macka0, na njeno mesto macka1, na mesto macke1 gre macka2, itd
+    # todo - premakni macka1, na njeno mesto macka0
+    # todo - premakni macka1, na njeno mesto macka2, na mesto macke2 gre macka1, itd
     # todo - (kaj je for zanka?)
     label.draw()
 
