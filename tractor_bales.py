@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 # http://pyglet.readthedocs.io/en/pyglet-1.3-maintenance/programming_guide/quickstart.html
 # http://steveasleep.com/pyglettutorial.html
@@ -9,13 +9,13 @@ from pyglet.window import key
 # narises tractor-blue.png trailer-blue.png
 
 window = pyglet.window.Window()
-window.width = 1800
-window.height = 1100
+window.width = 720
+window.height = 640
 tracktor = pyglet.resource.image('pic/tractor-blue.png')
 bale = pyglet.resource.image('pic/trailer-blue.png')
 
-tracktor.width = 300
-tracktor.height = 200
+tracktor.width = 200
+tracktor.height = 100
 bale.width = 100
 bale.height = 100
 
